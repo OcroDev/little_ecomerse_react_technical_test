@@ -2,9 +2,11 @@
 
 1. Ecomerce
 
-✅ Muestra una lista de productos de que vienen de un JSON
-✅ Añade un filtro por categoria
-✅ Añade un filtro por precio
+✅ Muestra una lista de productos de que vienen de un JSON.
+
+✅ Añade un filtro por categoria.
+
+✅ Añade un filtro por precio.
 
 Haz uso de use Context para evitar pasar props innecesarias
 
