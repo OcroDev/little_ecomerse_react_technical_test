@@ -8,7 +8,7 @@
 
 ✅ Añade un filtro por precio.
 
-Haz uso de use Context para evitar pasar props innecesarias
+✅ Haz uso de use Context para evitar pasar props innecesarias.
 
 2. Shopping Cart.
 
