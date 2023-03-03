@@ -4,7 +4,7 @@ import { cartReducer, cartInitialState, CART_ACTIONS } from '../reducers/cart';
 
 export const CartContext = createContext();
 
-export function CartProvider({ children }) {
+function useCartReducer() {
   const [state, dispatch] = useReducer(cartReducer, cartInitialState);
 
   const addToCart = (product) =>
@@ -24,12 +24,23 @@ export function CartProvider({ children }) {
       payload: product,
     });
 
+  return { addToCart, clearCart, removeFromCart, state };
+}
+
+export function CartProvider({ children }) {
+  const {
+    state: cart,
+    addToCart,
+    clearCart,
+    removeFromCart,
+  } = useCartReducer();
+
   //methods
 
   return (
     <CartContext.Provider
       value={{
-        cart: state,
+        cart,
         addToCart,
         clearCart,
         removeFromCart,
