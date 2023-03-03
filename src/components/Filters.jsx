@@ -3,7 +3,6 @@ import { useFilters } from '../hooks/useFilters';
 import './Filters.css';
 
 export const Filters = () => {
-  const [minPrice, setMinPrice] = useState(0);
   const minPriceFilterId = useId();
   const minCategoryFilterId = useId();
   const { filters, setFilters: onChange } = useFilters();
@@ -13,7 +12,6 @@ export const Filters = () => {
   };
 
   const handleChangeCategory = (event) => {
-    //ESTO HUELE MAL
     onChange((prevState) => ({ ...prevState, category: event.target.value }));
   };
 
